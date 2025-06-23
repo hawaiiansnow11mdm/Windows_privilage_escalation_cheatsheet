@@ -1,0 +1,1 @@
+# Windows_privilage_escalation_cheatsheet
